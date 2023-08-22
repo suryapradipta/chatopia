@@ -1,22 +1,38 @@
-
+import 'package:chatopia/pages/frame/message/index.dart';
+import 'package:chatopia/pages/frame/sign_in/index.dart';
+import 'package:chatopia/pages/frame/welcome/index.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
+
+import '../middlewares/router_auth.dart';
 import 'routes.dart';
 
 class AppPages {
   static const INITIAL = AppRoutes.INITIAL;
   static final RouteObserver<Route> observer = RouteObservers();
   static List<String> history = [];
- /*
   static final List<GetPage> routes = [
-    // 免登陆
+    // launch the app
     GetPage(
       name: AppRoutes.INITIAL,
       page: () => WelcomePage(),
       binding: WelcomeBinding(),
     ),
+    GetPage(
+      name: AppRoutes.SIGN_IN,
+      page: () => SignInPage(),
+      binding: SignInBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.Message,
+      page: () => const MessagePage(),
+      binding: MessageBinding(),
+      middlewares: [
+        RouteAuthMiddleware(priority: 1),
+      ],
+    ),
+    /*
     GetPage(
       name: AppRoutes.SIGN_IN,
       page: () => SignInPage(),
@@ -52,12 +68,6 @@ class AppPages {
 
     GetPage(name: AppRoutes.Photoimgview, page: () => PhotoImgViewPage(), binding: PhotoImgViewBinding()),
     GetPage(name: AppRoutes.VoiceCall, page: () => VoiceCallViewPage(), binding: VoiceCallViewBinding()),
-    GetPage(name: AppRoutes.VideoCall, page: () => VideoCallPage(), binding: VideoCallBinding()),
-  ];*/
-
-
-
-
-
-
+    GetPage(name: AppRoutes.VideoCall, page: () => VideoCallPage(), binding: VideoCallBinding()),*/
+  ];
 }
